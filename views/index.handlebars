@@ -8,7 +8,7 @@
     {{#each burgers}}
       {{#unless devoured}}
         <li>
-          <p class='burger'>{{id}}. {{name}}</p>
+          <p class='burger edible-burger'>{{id}}. {{name}}</p>
           <button class='devour-burger' data-id='{{id}}'>Devour It!</button>
         </li>
       {{/unless}}
@@ -21,7 +21,7 @@
     {{#each burgers}}
       {{#if devoured}}
         <li>
-          <p class='burger'>{{id}}. {{name}}</p>
+          <p class='burger devoured-burger'>{{id}}. {{name}}</p>
         </li>
       {{/if}}
     {{/each}}
@@ -32,7 +32,7 @@
   <form id='add-burger'>
     <textarea type='text' name='add' id='burger-name'></textarea>
     <br/>
-    <button type='submit'>Submit</button>
+    <button id='add-btn' type='submit'>Submit</button>
     <h4>Enter a burger you want to eat, then click the Submit button!</h4>
   </form>
 </section>
