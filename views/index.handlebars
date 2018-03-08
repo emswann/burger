@@ -1,0 +1,38 @@
+<section id='title'>
+  <img src='/assets/img/burger.jpg' alt='Burger Image'>
+  <h1>Eat-Da-Burger!</h1>
+</section>
+
+<section id='edible-list'>
+  <ul>
+    {{#each burgers}}
+      {{#unless devoured}}
+        <li>
+          <p class='item'>{{id}}. {{name}}</p>
+          <button class='edible' data-id='{{id}}'>Devour It!</button>
+        </li>
+      {{/unless}}
+    {{/each}}
+  </ul>
+</section>
+
+<section id='devoured-list'>
+  <ul>
+    {{#each burgers}}
+      {{#if devoured}}
+        <li>
+          <p class='item'>{{id}}. {{name}}</p>
+        </li>
+      {{/if}}
+    {{/each}}
+  </ul>
+</section>
+
+<section id='add'>
+  <form id='add-burger' class='button-size'>
+    <textarea type='text' name='add' id='burger-name'></textarea>
+    <br/>
+    <button type='submit'>Submit</button>
+    <h4>Enter a burger you want to eat, then click the Submit button!</h4>
+  </form>
+</section>

@@ -1,0 +1,30 @@
+{
+  "name": "burger",
+  "version": "1.0.0",
+  "description": "Burger Logger with MySQL, Node, Express, Handlebars and a homemade ORM - Homework #12",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/emswann/burger.git"
+  },
+  "keywords": [
+    "burger",
+    "logger"
+  ],
+  "author": "Elaina M. Swann",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/emswann/burger/issues"
+  },
+  "homepage": "https://github.com/emswann/burger#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "express-handlebars": "^3.0.0",
+    "mysql": "^2.15.0"
+  }
+}

@@ -1,0 +1,26 @@
+#title, #lists, #add {
+  text-align: center;
+}
+
+#edible-list, #devoured-list {
+  float: left;
+  width: 30%;
+}
+
+#edible-list {
+  margin-left: 30%;
+}
+
+ul {
+  list-style: none;
+}
+
+.item {
+  display: inline-block;
+  width: 14em;
+}
+
+#add {
+  clear: left;
+}
+
