@@ -9,8 +9,8 @@ var connection = mysql.createConnection({
 });
 
 connection.connect(err =>
-  err ? console.error('error connecting: ' + err.stack)
-      : console.log('connected as id ' + connection.threadId)
+  err ? console.error('Error connecting: ' + err.stack)
+      : console.log('Connected as id: ' + connection.threadId)
 );
 
 module.exports = connection;

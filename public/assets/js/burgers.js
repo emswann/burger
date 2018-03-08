@@ -9,14 +9,11 @@ $(document).ready(() => {
     $.ajax('/api/burgers', {
       type: 'POST',
       data: newBurger
-    }).then(() => {
-      console.log('Created new burger');
-      location.reload();
-    });
+    }).then(id => location.reload());
   });
 
   /* Cannot use => due to this reference. */
-  $('.edible').on('click', function(event) {
+  $('.devour-burger').on('click', function(event) {
     var id = $(this).data('id');
 
     var newState = {
@@ -26,9 +23,6 @@ $(document).ready(() => {
     $.ajax('/api/burgers/' + id, {
       type: 'PUT',
       data: newState
-    }).then(() => {
-      console.log('Changed state', newState);
-      location.reload();
-    });
+    }).then(() => location.reload());
   });
 });

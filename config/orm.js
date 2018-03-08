@@ -1,4 +1,4 @@
-var connection = require('../config/connection');
+var connection = require('./connection');
 
 var getPlaceholders = vals => vals.map(() => '?').toString();
 
@@ -8,7 +8,7 @@ var convertObjToSql = objColVals =>
 var orm = {
   all: 
     (table, cb) => {
-      var strQuery = 'SELECT * FROM ' + table;
+      var strQuery = 'SELECT * FROM ' + table + ' ORDER BY id';
       connection.query(strQuery, (err, result) => 
         err ? console.log(err) : cb(result)
       );

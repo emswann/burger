@@ -1,4 +1,4 @@
-#title, #lists, #add {
+#title, #add {
   text-align: center;
 }
 
@@ -15,7 +15,7 @@ ul {
   list-style: none;
 }
 
-.item {
+.burger {
   display: inline-block;
   width: 14em;
 }

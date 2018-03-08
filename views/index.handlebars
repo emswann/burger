@@ -8,8 +8,8 @@
     {{#each burgers}}
       {{#unless devoured}}
         <li>
-          <p class='item'>{{id}}. {{name}}</p>
-          <button class='edible' data-id='{{id}}'>Devour It!</button>
+          <p class='burger'>{{id}}. {{name}}</p>
+          <button class='devour-burger' data-id='{{id}}'>Devour It!</button>
         </li>
       {{/unless}}
     {{/each}}
@@ -21,7 +21,7 @@
     {{#each burgers}}
       {{#if devoured}}
         <li>
-          <p class='item'>{{id}}. {{name}}</p>
+          <p class='burger'>{{id}}. {{name}}</p>
         </li>
       {{/if}}
     {{/each}}
@@ -29,7 +29,7 @@
 </section>
 
 <section id='add'>
-  <form id='add-burger' class='button-size'>
+  <form id='add-burger'>
     <textarea type='text' name='add' id='burger-name'></textarea>
     <br/>
     <button type='submit'>Submit</button>
