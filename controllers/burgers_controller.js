@@ -3,7 +3,7 @@ var router = express.Router();
 
 var burger = require('../models/burger');
 
-router.get('/index', (req, res) => 
+router.get('/', (req, res) => 
   burger.all(result => {
     var hbsObj = {burgers: result};
     res.render('index', hbsObj);
