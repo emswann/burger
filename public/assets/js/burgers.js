@@ -9,7 +9,8 @@ $(document).ready(() => {
     $.ajax('/api/burgers', {
       type: 'POST',
       data: newBurger
-    }).then(id => location.reload());
+    }).then(id => location.reload()
+    ).fail(error => console.error(error));
   });
 
   /* Cannot use => due to this reference. */
@@ -23,6 +24,7 @@ $(document).ready(() => {
     $.ajax('/api/burgers/' + id, {
       type: 'PUT',
       data: newState
-    }).then(() => location.reload());
+    }).then(() => location.reload()
+    ).fail(error => console.error(error));
   });
 });

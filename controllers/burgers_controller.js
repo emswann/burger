@@ -17,7 +17,7 @@ router.post('/api/burgers', (req, res) => {
   burger.create(cols, vals, result => {
     console.log('Created "' + req.body.name 
                 + '" for id = ' + result.insertId);
-    res.json({id: result.insertId})
+    res.json({id: result.insertId});
   });
 });
 
@@ -28,10 +28,10 @@ router.put('/api/burgers/:id', (req, res) => {
   console.log('Changing state for id = ' 
               + req.params.id + ' to ' + req.body.devoured);
 
-  burger.update(objColVals, condition, result => {
+  burger.update(objColVals, condition, result => 
     result.changedRows == 0 ? res.status(404).end()
                             : res.status(200).end()
-  });
+  );
 });
 
 module.exports = router;

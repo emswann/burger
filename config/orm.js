@@ -10,7 +10,7 @@ var orm = {
     (table, cb) => {
       var strQuery = 'SELECT * FROM ' + table + ' ORDER BY id';
       connection.query(strQuery, (err, result) => 
-        err ? console.log(err) : cb(result)
+        err ? console.error(err) : cb(result)
       );
     },
   create:
@@ -19,7 +19,7 @@ var orm = {
                    + ' (' + cols.toString() + ') '
                    + 'VALUES (' + getPlaceholders(vals) + ')';
       connection.query(strQuery, vals, (err, result) => 
-        err ? console.log(err) : cb(result)
+        err ? console.error(err) : cb(result)
       );
     },
   update:
@@ -28,7 +28,7 @@ var orm = {
                    + ' SET ' + convertObjToSql(objColVals)
                    + ' WHERE ' + condition;
       connection.query(strQuery, (err, result) => 
-        err ? console.log(err) : cb(result)
+        err ? console.error(err) : cb(result)
       );
     }
 };
