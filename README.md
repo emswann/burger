@@ -7,9 +7,9 @@ When the user clicks the button, the burger moves to the right side of the page.
 
 The database stores all the burger information in a database so all data is persistent.
 
-You can refer to the video below for details regarding how the app works.
+Please refer to the video below for details regarding how the app works.
 
-<img src='public/asset/videos/burger.gif' alt='Burger GIF' width='550'>
+<img src='public/assets/videos/burger.gif' alt='Burger GIF' width='550'>
 
 ## Getting Started
 
